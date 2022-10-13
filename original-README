@@ -1,0 +1,34 @@
+Hi, thank you for your interest in joining the oVice engineering team. Attached is a homework programming assignment we'd like you to complete. We will use your solutions to get a better sense of your skills and fit within our team. The problem is representative of the kind of work done at oVice.
+
+We expect you to spend a maximum of 2 hours on this problem. This might not be enough to finish both questions, which is fine. We are not expecting you to demonstrate perfect code. We are more interested in the tradeoffs you make in the time allotted.
+
+In addition to programming, we are evaluating you on your communication skills and testing mindset. Please try to write code that is self documenting. In places where you feel your code is not self documenting, please comment with your decision making rationale. We may ask you about these decisions, tradeoffs, or other reasoning in follow up correspondence.
+
+Problem:
+
+You may use the programming language of your choice with any open source libraries. You may refer to online documentation or stack overflow. Please document any links to resources that contributed significantly to your final solution.
+
+We are providing you a CSV with name, email, last login time, workspace name and role. We want you to write 2 functions.
+
+1. Write a function that takes a string which is a path to a CSV. This function will dedupe users by email and write a new CSV with the same columns. When a duplicate user is found, pick the row with the later login time along with the workspace and role associated with that row. 
+
+For duplicate user rows with different names, we encourage you to favor names that are more representative of the user's native language. 
+
+For example:
+
+- González vs Gonzalez - pick González
+- Yamada vs 山田 - pick 山田
+- 홍길동 vs Hong Gildong - pick 홍길동
+
+However, if the name is more commonly written in the common ASCII set of characters, prefer the ASCII version.
+
+For example:
+
+- James vs Ｊａｍｅｓ - pick James
+
+2. Write a function that takes a string path to a CSV and two datetimes (from, to) in the same format as the CSV (e.g. "2021-01-04 18:04:28 +0800"). Write a CSV with all login entries between the from and to datetime, inclusive. It is your choice or not whether you want to dedupe these users using your solution to problem 1.
+
+
+Submission:
+
+Please submit your solution to us in a zip file. If your code requires any dependencies, please include package files appropriate to your language choice (e.g. mix.exs, package.json, Gemfile).
